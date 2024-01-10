@@ -9,8 +9,8 @@
   - [0.15 web_demo部署](#0.5web_demo部署)
 
 
-# 0. 介绍
-## 0.1 大模型开发范式
+# 0.介绍
+## 0.1大模型开发范式
 ![image](https://github.com/wangbing112/keith_Learn/assets/78155747/6a8791f5-309a-46cb-8e6c-aeff1dc8a4c4)
 
 目前的核心大模型应用开发方案是InternLM的通用大模型，具有强大的语言理解、指令跟随和语言生成的能力。他们可以理解用户自然语言的指令，具有强大的知识储备和一定的逻辑推理能力，能够作为基座模型知识多元应用是解决复杂问题和应用于多领域的强大工具。
@@ -46,7 +46,7 @@ Finetune范式的应用将在个性化数据上微调，因此可以充分的和
 在这里我们认为与问题相似的文本段大概率包含了问题的答案。
 然后我们会将用户的输入和检索到的相似文本段一起嵌入到模型的prompt中，传递给intelnLM，要求他对问题做出最终的回答，作为最后的输出，这就是RAG的基本思想。
 
-## 0.2 LangChain简介
+## 0.2LangChain简介
 
 ![image](https://github.com/wangbing112/keith_Learn/assets/78155747/d34f0d41-0469-4010-b97b-64dc0b8bcfc4)
 
@@ -68,7 +68,7 @@ LangChain是一个针对大模型开发的第三方开源框架，旨在通过�
 将相关的文本段嵌入到已经写好的prompt template中，再交给InternLM进行最后的回答即可。
 上述这一整个过程都会被封装在检索问答中，我们可以直接将个性化的配置引入到检索问答的对象，即可构建属于自己的RAG应用。
 
-## 0.3 构建向量数据库
+## 0.3构建向量数据库
 
 ![image](https://github.com/wangbing112/keith_Learn/assets/78155747/fcde0e1f-722b-47cb-822a-732747e5c3e5)
 
@@ -87,7 +87,7 @@ LangChain是一个针对大模型开发的第三方开源框架，旨在通过�
 我们可以使用任意一种embedding模型来进行向量化。在本节课后续的实战环节，我们会使用开源词向量sentence transformer来进行向量化，
 同时我们也可以使用多种支持语音检索的向量数据库。我们一般使用轻量级适合入门的chroma数据库来搭建。
 
-## 0.4 搭建知识库助手
+## 0.4搭建知识库助手
 
 ![image](https://github.com/wangbing112/keith_Learn/assets/78155747/be19c6b2-245d-4bf8-97e4-975e83ddcc22)
 
@@ -111,7 +111,7 @@ LangChain的检索问答组件，可以自动实现知识检索、prompt的嵌�
 而从prompt的方面，我们可以迭代优化prompt的策略，来不断激发模型的潜在能力，提高回答的性能。
 
 
-## 0.5 web_demo部署
+## 0.5web_demo部署
 
 ![image](https://github.com/wangbing112/keith_Learn/assets/78155747/d196e4ec-9efd-48f2-93a7-f64bafc2fe90)
 
